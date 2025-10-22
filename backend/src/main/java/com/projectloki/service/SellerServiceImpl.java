@@ -6,9 +6,11 @@ import com.projectloki.model.entity.Seller;
 import com.projectloki.repository.SellerRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class SellerServiceImpl implements SellerService{
     private final SellerRepository sellerRepository;
     private final ModelMapper modelMapper;
