@@ -1,7 +1,7 @@
 package com.projectloki.repository;
 
-import com.projectloki.model.entity.User;
+import com.projectloki.model.entity.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ClientRepository extends JpaRepository<User, Long> {
+public interface ClientRepository extends JpaRepository<Client, Long> {
 }

@@ -9,6 +9,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -24,15 +25,15 @@ public class ClientServiceImpl implements ClientService {
     }
 
     public List<ClientResponseDTO> getAllClients() {
-        List<User> users = clientRepository.findAll();
-        return users.stream()
-                .map(user -> mapperService.map(user, ClientResponseDTO.class))
+        List<Client> clients = clientRepository.findAll();
+        return clients.stream()
+                .map(client -> mapperService.map(client, ClientResponseDTO.class))
                 .collect(Collectors.toList());
     }
 
     public ClientResponseDTO getClientById(Long id) {
-        User user = clientRepository.findById(id).orElseThrow(() -> new RuntimeException("Client not found"));
-        return mapperService.map(user, ClientResponseDTO.class);
+        Client client = clientRepository.findById(id).orElseThrow(() -> new RuntimeException("Client not found"));
+        return mapperService.map(client, ClientResponseDTO.class);
     }
 
     public ClientResponseDTO createClient(ClientRequestDTO clientRequestDTO) {
@@ -43,10 +44,10 @@ public class ClientServiceImpl implements ClientService {
 }
 
     public ClientResponseDTO updateClient(Long id, ClientResponseDTO clientRequestDTO) {
-        User existingUser = clientRepository.findById(id).orElseThrow(() -> new RuntimeException("Client not found"));
-        mapperService.map(clientRequestDTO, existingUser);
-        User updatedUser = clientRepository.save(existingUser);
-        return mapperService.map(updatedUser, ClientResponseDTO.class);
+        Client existingClient = clientRepository.findById(id).orElseThrow(() -> new RuntimeException("Client not found"));
+        mapperService.map(clientRequestDTO, existingClient);
+        Client updatedClient = clientRepository.save(existingClient);
+        return mapperService.map(updatedClient, ClientResponseDTO.class);
     }
 
     public void deleteClient(Long id) {
