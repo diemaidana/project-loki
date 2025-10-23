@@ -3,7 +3,6 @@ package com.projectloki.controller;
 import com.projectloki.exceptions.ProductNotFoundException;
 import com.projectloki.model.dto.ProductRequestDTO;
 import com.projectloki.model.dto.ProductResponseDTO;
-import com.projectloki.model.entity.Product;
 import com.projectloki.service.ProductService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.projectloki.model.entity;
+package com.projectloki.model.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

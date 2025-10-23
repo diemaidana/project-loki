@@ -1,4 +1,4 @@
-package com.projectloki.model.entity;
+package com.projectloki.model.entities;
 
 public class Seller extends User {
 

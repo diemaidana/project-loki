@@ -2,7 +2,7 @@ package com.projectloki.service;
 
 import com.projectloki.model.dto.SellerRequestDTO;
 import com.projectloki.model.dto.SellerResponseDTO;
-import com.projectloki.model.entity.Seller;
+import com.projectloki.model.entities.Seller;
 import com.projectloki.repository.SellerRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
