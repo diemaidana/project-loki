@@ -6,6 +6,7 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "app_users")
 @Data
 @ToString
 @EqualsAndHashCode
@@ -45,7 +46,7 @@ public class User {
         this.nationality = nationality;
     }
 
-    public void setUpDate(LocalDate upDate) {
-        this.upDate = upDate;
-    }
+//    public void setUpDate(LocalDate upDate) {
+//        this.upDate = upDate;
+//    }
 }
