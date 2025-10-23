@@ -1,7 +1,6 @@
 package com.projectloki.repository;
 
-import com.projectloki.model.dto.ProductResponseDTO;
-import com.projectloki.model.entity.Product;
+import com.projectloki.model.entities.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

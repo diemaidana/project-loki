@@ -27,9 +27,13 @@ public class SellerRequestDTO {
     private String password;
 
     // Nombre Completo
-    @NotBlank(message = "El nombre completo es obligatorio.")
-    @Size(max = 150, message = "El nombre completo no debe exceder los 150 caracteres.")
-    private String fullName;
+    @NotBlank(message = "El nombre es obligatorio.")
+    @Size(max = 50, message = "El nombre no debe exceder los 50 caracteres.")
+    private String name;
+
+    @NotBlank(message = "El apellido es obligatorio.")
+    @Size(max = 100, message = "El apellido no debe exceder los 100 caracteres.")
+    private String lastName;
 
     // Documento de Identidad (DNI)
     @NotBlank(message = "El DNI es obligatorio.")

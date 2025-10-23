@@ -2,14 +2,12 @@ package com.projectloki.service;
 
 import com.projectloki.model.dto.ClientRequestDTO;
 import com.projectloki.model.dto.ClientResponseDTO;
-import com.projectloki.model.entity.Client;
-import com.projectloki.model.entity.User;
+import com.projectloki.model.entities.Client;
 import com.projectloki.repository.ClientRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.stream.Collectors;
 
