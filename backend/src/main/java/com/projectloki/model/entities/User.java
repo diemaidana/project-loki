@@ -7,46 +7,40 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "app_users")
-@Data
 @ToString
 @EqualsAndHashCode
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     @Id
-    @SequenceGenerator(
-            name = "perfil_seq_gen",
-            sequenceName = "perfil_seq_gen",
-            allocationSize = 1
-    )
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "perfil_seq_gen")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(nullable = false)
     private String username;
+
+    @Column(nullable = false, unique = true)
     private String email;
+
+    @Column(nullable = false, unique = true)
     private String password;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
     private String fullName;
+
+    @Column(nullable = false)
     private String DNI;
+
     private String phoneNumber;
+
     private String address;
+
     private String nationality;
+
     private LocalDate upDate;
-
-    // Constructor sin id
-
-    public User(String username, String email, String password, String fullName, String DNI, String phoneNumber, String address, String nationality) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.fullName = fullName;
-        this.DNI = DNI;
-        this.phoneNumber = phoneNumber;
-        this.address = address;
-        this.nationality = nationality;
-    }
-
-//    public void setUpDate(LocalDate upDate) {
-//        this.upDate = upDate;
-//    }
 }

@@ -1,13 +1,15 @@
 package com.projectloki.model.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.*;
+
+@Entity
+@Table(name = "sellers")
+@Getter
+@Setter
+@ToString(callSuper = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Seller extends User {
-
-
-
-    public Seller(String username, String email, String password, String fullName, String DNI, String phoneNumber, String address, String nationality) {
-        super(username, email, password, fullName, DNI, phoneNumber, address, nationality);
-        //this.products = products;
-    }
-
-
 }
