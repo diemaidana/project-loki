@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="KotlinNotebookOptionsProvider">
+    <option name="extraEnvironmentVariables">
+      <map>
+        <entry key="DB_NAME" value="loki_db" />
+        <entry key="DB_PASSWORD" value="Sonlegends05." />
+        <entry key="DB_USER" value="sonlegends" />
+      </map>
+    </option>
+  </component>
+</project>
